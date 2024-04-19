@@ -45,7 +45,7 @@ class Text2SpeechGUI:
         load_text_button.grid(row=2, column=0, padx=10, pady=10)
 
         # Specify output file button
-        save_file_button = ttk.Button(frame, text="Specify Output File", command=self.on_save_file_clicked, width=20)
+        save_file_button = ttk.Button(frame, text="Set Output File", command=self.on_save_file_clicked, width=20)
         save_file_button.grid(row=2, column=1, padx=10, pady=10)
 
         # txt_2_speech button
@@ -71,16 +71,6 @@ class Text2SpeechGUI:
 
         rButton_maleVoice = ttk.Radiobutton(frame, text="Male voice   ", variable=self.voice, value="onyx")
         rButton_maleVoice.grid(row=6, column=0, padx=0, pady=0, sticky='w')
-
-        label = ttk.Label(frame, text="Play audio", font=('Calibri', 12))
-        label.grid(row=7, column=0, columnspan=4, sticky=tk.W)
-
-        self.play_file = tk.StringVar(value="No")
-        rButton_playFile_yes = ttk.Radiobutton(frame, text="Yes", variable=self.play_file, value="Yes")
-        rButton_playFile_yes.grid(row=8, column=0, padx=0, pady=0, sticky='w')
-
-        rButtonttk_playFile_no= ttk.Radiobutton(frame, text="No", variable=self.play_file, value="No")
-        rButtonttk_playFile_no.grid(row=9, column=0, padx=0, pady=0, sticky='w')
 
         # Entry for sound speed
         ttk.Label(frame, text="Speed (0.5-2.0):", font=('Calibri', 12)).grid(row=10, column=0, padx=0, pady=0, sticky=tk.W)
@@ -143,10 +133,6 @@ class Text2SpeechGUI:
         selected_voice = self.voice.get()
         print(f"Selected voice type: {selected_voice}")
 
-        # Get values of radio buttons play audio after processing
-        do_play_file = self.play_file.get()
-        print(f"Play file directly: {do_play_file}")
-
         try:
             response = client.audio.speech.create(
                 model="tts-1",
@@ -161,10 +147,6 @@ class Text2SpeechGUI:
             speech_file_path = self.output_file_path
             response.stream_to_file(speech_file_path)
             print(f"Saving audio to: {speech_file_path}")
-
-            if do_play_file == 'Yes':
-                # Play the MP3 file immediately after it's written to disk
-                playsound(speech_file_path)
 
             txtName = speech_file_path.rsplit('.', 1)[0] + '.txt'
             print(f"Saving text input to: {txtName}")
