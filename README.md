@@ -2,8 +2,6 @@
 
 TalkingVid_AI is a GUI realized using Python and Tkinter. It uses the OpenAI Python API and the OpenAI tts1-model to convert ASCII text to a mp3 audio file.
 
-
-
 ## Important prerequisite
 
 To use TalkingVid_AI, you need an OpenAI account ([https://openai.com/](https://openai.com/)).
@@ -32,7 +30,7 @@ Initially, you have a small credit balance in your account and can use the Talki
 
 TalkingVid_AI is Python Tkinter Widget.
 
-![alt text](figures/interface.png)
+![alt text](figures/widget.png)
  
  
 At the top of the widget, there is a text input field. Here, you can type or paste the text that you want to convert into an MP3 file.
@@ -64,4 +62,6 @@ Here you can switch between a female and a male voice.
 
 **Speed (0.5-2.0)**
 This option allows you to set the voice speed. Default value is 1.0
+
+
 

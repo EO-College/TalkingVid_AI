@@ -2,6 +2,5 @@ name: TalkingVid_AI
 dependencies:
   - python>= 3.9
   - tkinter
-  - playsound
   - openai
   - threading

@@ -5,7 +5,6 @@ the OpenAI tts-1 model to convert text to speech. An audio stream is returned an
 __author__ = "Carsten Pathe"
 __license__ = "GNU General Public License v3.0"
 
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog, messagebox, scrolledtext
