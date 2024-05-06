@@ -5,6 +5,7 @@ the OpenAI tts-1 model to convert text to speech. An audio stream is returned an
 __author__ = "Carsten Pathe"
 __license__ = "GNU General Public License v3.0"
 
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog, messagebox, scrolledtext
@@ -35,7 +36,7 @@ class Text2SpeechGUI:
         label.grid(row=0, column=0, columnspan=2, sticky=tk.W)
 
         # Multi-line text input field with word wrap enabled
-        self.text_input = scrolledtext.ScrolledText(frame, wrap=tk.WORD, height=10, width=120, font=('Cambria',14))
+        self.text_input = scrolledtext.ScrolledText(frame, wrap=tk.WORD, height=10, width=120, font=('Cambria',12))
         self.text_input.grid(row=1, column=0, columnspan=4, sticky=(tk.W, tk.E))
         self.text_input.focus()
 
@@ -44,7 +45,7 @@ class Text2SpeechGUI:
         load_text_button.grid(row=2, column=0, padx=10, pady=10)
 
         # Specify output file button
-        save_file_button = ttk.Button(frame, text="Set Output File", command=self.on_save_file_clicked, width=20)
+        save_file_button = ttk.Button(frame, text="Specify Output File", command=self.on_save_file_clicked, width=20)
         save_file_button.grid(row=2, column=1, padx=10, pady=10)
 
         # txt_2_speech button
@@ -56,7 +57,7 @@ class Text2SpeechGUI:
         quit_button.grid(row=2, column=3, padx=10, pady=10)
 
         # Label for descriptive text
-        label = ttk.Label(frame, text="Options:", font=('Calibri', 12, 'bold'))
+        label = ttk.Label(frame, text="Options", font=('Calibri', 12, 'bold'))
         label.grid(row=3, column=0, columnspan=4, sticky=tk.W)
 
         label = ttk.Label(frame, text="Voice", font=('Calibri', 12))
@@ -69,10 +70,10 @@ class Text2SpeechGUI:
         rButton_femaleVoice.grid(row=5, column=0, padx=0, pady=0, sticky='w')
 
         rButton_maleVoice = ttk.Radiobutton(frame, text="Male voice   ", variable=self.voice, value="onyx")
-        rButton_maleVoice.grid(row=6, column=0, padx=0, pady=0, sticky='w')
+        rButton_maleVoice.grid(row=6, column=0, padx=0, pady=0, sticky='w')    
 
         # Entry for sound speed
-        ttk.Label(frame, text="Speed (0.5-2.0):", font=('Calibri', 12)).grid(row=10, column=0, padx=0, pady=0, sticky=tk.W)
+        ttk.Label(frame, text="Speech Speed (0.5-2.0):", font=('Calibri', 12)).grid(row=10, column=0, padx=0, pady=0, sticky=tk.W)
         self.speed_entry = ttk.Entry(frame)
         self.speed_entry.grid(row=11, column=0, padx=0, pady=0, sticky=tk.W)
         self.speed_entry.insert(0, "1.0")  # Default speed
@@ -122,7 +123,7 @@ class Text2SpeechGUI:
     # Thread "process_text" (when button "txt_2_speech" was clicked)
     def process_text(self):
 
-        # Before calling the TTS API
+        # Get settings for voice speed
         try:
             speed = float(self.speed_entry.get())  # Assumed validation has already happened
         except ValueError:
