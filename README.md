@@ -25,6 +25,22 @@ On Windows, this key needs to be added to the system variables. Here's how to do
     
 Initially, you have a small credit balance in your account and can use the TalkingVid_AI application and the tts-1 model it is using. After this starting credit is used up, you can top it up in the profile settings under the Billing category ([https://platform.openai.com/settings/organization/billing/overview](https://platform.openai.com/settings/organization/billing/overview)). The minimum deposit is $5 and can be paid by credit card.
 
+## Installation
+
+TalkingVID_AI is not yet available via conda-forge or other common package distribution channels. For now, the following shall provide a convenient installation option provided that Anaconda or Miniconda has been installed.
+
+1. Create and then activate the conda environment
+
+```
+conda env create --file https://raw.githubusercontent.com/EO-College/TalkingVid_AI/main/environment.yml?token=GHSAT0AAAAAACRYVXCLQQKLETRWDY33DTLSZRZAVWQ
+
+conda activate TalkingVid_AI
+```
+2. Install TalkingVid_AI.py
+
+```
+pip install git+https://github.com/EO-College/TalkingVid_AI.git
+```
 
 ## How to use the application
 

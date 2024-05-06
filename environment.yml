@@ -1,6 +1,7 @@
 name: TalkingVid_AI
+channels:
+  - conda-forge
 dependencies:
-  - python>= 3.9
-  - tkinter
-  - openai
-  - threading
+ - python>=3.9
+ - openai
+ - playsound
