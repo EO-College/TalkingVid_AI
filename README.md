@@ -32,7 +32,7 @@ TalkingVID_AI is not yet available via conda-forge or other common package distr
 1. Create and then activate the conda environment
 
 ```
-conda env create --file https://raw.githubusercontent.com/EO-College/TalkingVid_AI/main/environment.yml?token=GHSAT0AAAAAACRYVXCLQQKLETRWDY33DTLSZRZAVWQ
+conda env create --file https://raw.githubusercontent.com/EO-College/TalkingVid_AI/main/environment.yml
 
 conda activate TalkingVid_AI
 ```
