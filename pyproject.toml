@@ -1,0 +1,20 @@
+[project]
+name = "TalkingVid_AI"
+version = "1.0"
+authors = [
+  {name="Carsten Pathe", email="carsten.pathe@uni-jena.de"},
+]
+description = "Convert ASCII text to MP3"
+readme = "README.md"
+license = {text = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "openai",
+]
+
+[project.urls]
+Repository = "https://github.com/EO-College/TalkingVid_AI"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
