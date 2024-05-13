@@ -27,7 +27,12 @@ Initially, you have a small credit balance in your account and can use the Talki
 
 ## Installation
 
-TalkingVID_AI is not yet available via conda-forge or other common package distribution channels. For now, the following shall provide a convenient installation option provided that Anaconda or Miniconda has been installed.
+TalkingVID_AI is not yet available via conda-forge or other common package distribution channels. For now, the following shall provide a convenient installation option provided that:
+- Git is installed 
+    - Git is free software for distributed version management of files ([https://git-scm.com/](https://git-scm.com/))
+- Anaconda/Miniconda has been installed
+    - Open-source package and environment management system 
+    ([https://www.anaconda.com/](https://www.anaconda.com/))
 
 1. Create and then activate the conda environment
 
@@ -38,11 +43,19 @@ conda activate TalkingVid_AI
 ```
 2. Install TalkingVid_AI.py
 
+Open the command prompt. Change to the directory where the software is to be installed and enter:
+
 ```
-pip install git+https://github.com/EO-College/TalkingVid_AI.git
+git clone git+https://github.com/EO-College/TalkingVid_AI.git
 ```
 
 ## How to use the application
+
+Change to the directory you selected as installation directory. You can start it in that directory like this: 
+
+```
+python Talking Vid_AI.py
+```
 
 TalkingVid_AI is Python Tkinter Widget.
 
