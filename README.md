@@ -46,7 +46,7 @@ conda activate TalkingVid_AI
 Open the command prompt. Change to the directory where the software is to be installed and enter:
 
 ```
-git clone git+https://github.com/EO-College/TalkingVid_AI.git
+git clone https://github.com/EO-College/TalkingVid_AI.git
 ```
 
 ## How to use the application
@@ -54,7 +54,7 @@ git clone git+https://github.com/EO-College/TalkingVid_AI.git
 Change to the directory you selected as installation directory. You can start it in that directory like this: 
 
 ```
-python Talking Vid_AI.py
+python TalkingVid_AI.py
 ```
 
 TalkingVid_AI is Python Tkinter Widget.
