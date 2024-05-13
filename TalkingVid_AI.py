@@ -12,7 +12,6 @@ from tkinter import filedialog, messagebox, scrolledtext
 import threading
 import os
 import time
-from playsound import playsound
 
 from openai import OpenAI
 client = OpenAI()

@@ -18,3 +18,5 @@ Repository = "https://github.com/EO-College/TalkingVid_AI"
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+C:\Users\qi64ker\Documents\GitHub\TalkingVid_AI\pyproject.toml
